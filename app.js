@@ -1,6 +1,6 @@
 import express from 'express';
 import "dotenv/config";
-import session from "express-session";
+//import session from "express-session";
 import Hello from './hello.js';
 import Lab5 from "./Lab5.js";
 import CourseRoutes from "./courses/routes.js";
