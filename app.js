@@ -4,7 +4,7 @@ import "dotenv/config";
 import Hello from './hello.js';
 import Lab5 from "./Lab5.js";
 import CourseRoutes from "./courses/routes.js";
-import ModuleRoutes from "./Modules/routes.js";
+import ModuleRoutes from "./modules/routes.js";
 import AssignmentsRoutes from "./assignments/routes.js";
 import cors from "cors";
 
