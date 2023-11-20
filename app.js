@@ -13,12 +13,13 @@ const app = express();
 
 //app.listen(4000)
 app.listen(process.env.PORT || 4000);
-//app.use(cors());
-app.use(
+app.use(cors());
+
+/*app.use(
     cors({
              credentials: true,
              origin: process.env.FRONTEND_URL
-         }) );
+         }) ); */
 app.use(express.json());
 ModuleRoutes(app);
 Lab5(app);
