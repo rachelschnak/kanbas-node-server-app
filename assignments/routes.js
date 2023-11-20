@@ -1,5 +1,5 @@
 import db from "../Database/index.js";
-import Database from "../Database/index.js";
+
 function AssignmentsRoutes(app) {
     app.put("/api/assignments/:aid", (req, res) => {
         const { aid } = req.params;
