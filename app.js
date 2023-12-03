@@ -12,11 +12,12 @@ import session from "express-session";
 
 //mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
 
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas'
-mongoose.connect(CONNECTION_STRING);
+//const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas'
+mongoose.connect('mongodb+srv://rachelschnak:webdev123@cluster0.foyvsuu.mongodb.net/?retryWrites=true&w=majority', {dbName: 'kanbas'});
+
 
 const app = express();
-app.listen(process.env.PORT || 4000);
+
 app.use(
     cors({
              credentials: true,
@@ -36,6 +37,7 @@ if (process.env.NODE_ENV !== "development") {
 };
 app.use(session(sessionOptions));
 app.use(express.json());
+app.listen(process.env.PORT || 4000);
 ModuleRoutes(app);
 Lab5(app);
 CourseRoutes(app);
